@@ -5,43 +5,110 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="16dp"
     tools:context="com.example.aulasql.MainActivity">
 
-    <Button
-        android:id="@+id/bt_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00"/>
-
-    <Button
-        android:id="@+id/bt_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="add" />
-
-    <Button
-        android:id="@+id/bt_del"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="del" />
-
-    <ScrollView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_01"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
 
+    <TableLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow>
             <TextView
-                android:id="@+id/tv_01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello World!" />
+                android:text="id:"/>
+            <TextView
+                android:id="@+id/tv_main_id"
+                android:textSize="18sp"/>
+        </TableRow>
 
-        </LinearLayout>
-    </ScrollView>
+        <TableRow>
+
+            <TextView android:text="Matrícula:" />
+
+            <EditText
+                android:id="@+id/et_mat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="matricula"
+                android:inputType="numberDecimal"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Nome:" />
+
+            <EditText
+                android:id="@+id/et_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="nome"
+                android:inputType="textCapWords"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Curso:" />
+
+            <EditText
+                android:id="@+id/et_curso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="curso"
+                android:inputType="textCapWords"/>
+
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:shrinkColumns="*">
+
+            <TableRow>
+                <Button
+                    android:id="@+id/bt_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="ADD" />
+
+                <Button
+                    android:id="@+id/bt_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="save" />
+
+                <Button
+                    android:id="@+id/bt_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="CLR" />
+
+                <Button
+                    android:id="@+id/bt_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="DEL" />
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </TableLayout>
+
+
 </LinearLayout>
