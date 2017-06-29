@@ -11,11 +11,7 @@ import static com.example.aulasql.MainActivity.TABLE_NAME;
  */
 
 public class SqlOpenHelper extends SQLiteOpenHelper {
-//    public static final String DBNAME = "pedidos.sqlite";
-//    public static final int VERSION = 1;
-//    public static final String TABLE_NAME = "pedidos";
-//    public static final String ID = "id";
-//    public static final String NAME = "name";
+
     private String databaseName;
     private int version;
 
@@ -37,7 +33,7 @@ public class SqlOpenHelper extends SQLiteOpenHelper {
 
     public void createDatabase(SQLiteDatabase db){
         String sql = "create table " + TABLE_NAME + "(" + " id integer primary key autoincrement not null, "
-                + " qtd integer, " + " name text not null" + ");";
+                + " matricula integer, " + " nome text not null," + " curso text not null "+ ");";
         db.execSQL(sql);
     }
 
