@@ -156,9 +156,6 @@ public class MainActivity extends AppCompatActivity {
         //posicionamos o cursor na primeira posição da tabela
         listCursor.moveToFirst();
 
-        //Limpamos o ArrayList para preenchê-lo desde o início novamente
-        alunosList.clear();
-
         //executamos o loop até o fim da tabela
         if(! listCursor.isAfterLast()) {
             do {
